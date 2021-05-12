@@ -1,0 +1,152 @@
+\documentclass[oneside,a4paper]{amsart}
+%\usepackage{maa-monthly}
+\usepackage{gauss-bonnet}
+%\usepackage[russian,english]{babel}
+%\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\title{An exercise on the comparison theorem}
+\author{Anton Petrunin and Sergio Zamora Barrera}
+%\address{Anton Petrunin,  Math. Dept., PSU, University Park,  PA 16802, USA.}
+%\address{aqp6@psu.edu}
+%\address{Sergio Zamora Barrera,  Math. Dept., PSU,University Park,  PA 16802, USA.}
+%\address{sxz38@psu.edu}
+
+\keywords{discrete minimal surface, polyhedral surface, area minimizing surface, minimal surface.}
+\maketitle
+
+The following exotic problem was used it as an advanced exercise in our textbook~\cite{petrunin-zamora};
+it requires creativity in applying comparison theorems.
+
+{
+
+\begin{wrapfigure}{r}{30 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-1}
+\bigskip
+\includegraphics{mppics/pic-3}
+\end{wrapfigure}
+
+\begin{thm}{Problem}
+Suppose $\Sigma$ is a smooth closed convex in the Euclidean space. 
+Show that a closed geodesic $\gamma$ on $\Sigma$ cannot have a configuration of self-intersections as shown on the first diagram.
+
+In other words, show that $\gamma$ cannot cut $\Sigma$ into one quadrangle, one pentagon, and three monogons.
+\end{thm}
+
+If you limit number of self-intersections to 3, then the given diagram is the only one that requires substantial work.
+
+For example, the problem for the second diagram is much simpler.
+It can appear as a closed geodesic on a convex surface;
+an example can be constructed by fattening an equilateral triangle.
+However, the answer is ``no'' if one assumes that the surface is \emph{strictly} convex. 
+It follows from the Gauss--Bonnet formula.
+We recommend to solve the second problem before reading further.
+
+}
+
+\section*{Comparison theorem}
+
+Further we assume that $\Sigma$ is a closed convex surface;
+in particular, $\Sigma$ is homeomorphic to the sphere and has nonnegative Gauss curvature.
+
+Suppose that $\Delta$ is an $n$-gon on $\Sigma$ with geodesic sides.
+From the \emph{Gauss--Bonnet formula} it follows that sum of the internal angles of $\Delta$ cannot be smaller than $(n-2)\cdot\pi$.
+
+In particular, if $\Delta$ is a triangle with angles $\alpha$, $\beta$, and $\gamma$, then
+\[\alpha+\beta+\gamma\ge\pi.\leqno({*})\]
+
+If we assume in addition that the sides of $\Delta$ are length minimizing geodesics among the curves in $\Delta$ with the same endpoints, then the inequality $({*})$ can be made more exact.
+
+Namely consider the so-called \emph{model triangle} $\tilde\Delta$ of $\Delta$; that is, $\tilde\Delta$ is a plane triangle with equal corresponding sides.
+Since the sides are length-minimizing in $\Delta$, they satisfy the triangle inequality; therefore the model triangle is defined.
+
+Denote bu $\tilde \alpha$, $\tilde \beta$ and $\tilde \gamma$ the angles of $\tilde\Delta$ respectively.
+Then 
+\[
+\alpha> \tilde \alpha,
+\qquad
+\beta> \tilde \beta,
+\qquad
+\text{and}
+\qquad
+\gamma> \tilde \gamma.
+\leqno({*}{*})
+\]
+Since $\tilde\alpha+\tilde\beta+\tilde\gamma=\pi$, this inequality implies $({*})$.
+
+The inequality $({*}{*})$ easily follows from the proof of the \emph{Toponogov comparison theorem}.
+We leave it as an exercise to those who knows this proof;
+the rest of the readers should simply believe that it is true.
+
+\section*{Proof}
+
+Arguing by contradiction, suppose that $\Sigma$ contains such a geodesic $\gamma$;
+assume that arcs and angles are labeled as on the left diagram.
+
+\begin{figure}[!ht]
+\begin{minipage}{.38\textwidth}
+\centering
+\includegraphics{mppics/pic-472}
+\end{minipage}\hfill
+\begin{minipage}{.58\textwidth}
+\centering
+\includegraphics{mppics/pic-473}
+\end{minipage}
+\end{figure}
+
+
+Applying the Gauss--Bonnet formula to the quadrangle and pentagon that the geodesic cuts from $\Sigma$, we get that
+\[2\cdot\alpha\le\beta+\gamma
+\qquad\text{and} \qquad
+2\cdot\beta+2\cdot \gamma\le\pi+\alpha.\leqno(\asterism)\]
+It follows that $\alpha \le\tfrac \pi 3$.
+
+
+Consider the part of the geodesic $\gamma$ without the arc~$a$.
+It cuts from $\Sigma$ a pentagon $\Delta$ with sides and angles shown on the diagram on the right.
+
+\begin{wrapfigure}{r}{50 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-474}
+\vskip8mm
+\end{wrapfigure}
+
+Since small segments of any geodesic on $\Sigma$ are length minimizing, we can add additional vertices of the sides of $\Delta$ so that each side becomes length-minimizing.
+Choose a vertex $v$ and subdivide $\Delta$ into triangles by joining $v$ to other vertices of the broken geodesic.
+
+Consider a model triangle for each triangle in the subdivision so that they shared sides as in $\Delta$.
+By comparison inequality $({*}{*})$, the angles of the model triangles do not exceed the corresponding angles of the original triangle.
+Therefore the model triangles form a plane pentagon $\tilde\Delta$ with convex polygonal sides.
+Moreover its angles do not exceed the corresponding angles of $\Delta$.
+
+\begin{wrapfigure}{r}{50 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-500}
+\vskip0mm
+\end{wrapfigure}
+
+It remains to show described plane polygogon does not exist.
+Let us orient its  sides counterclockwise;
+denote the obtained vectors by $s_1,\dots,s_k$.
+
+On the other hand, the conditions on the angles of polygons imply that the vectors $s_i$ point in the complement of white sectors shown with angles marked on the diagram.
+The sum of magnitudes of the vectors in each black sector is also marked.
+Let $v$, $v'$, $w$, $w'$ be the marked unit vectors;
+set $r=v+v'+w+w'$.
+Observe that $(\asterism)$ implies that $r\ne 0$,
+and, moreover, 
+\[\langle r,s_1\rangle+\dots+\langle r,s_k\rangle>0,\]
+but  $s_1+\dots+s_k=0$ --- a contradiction.
+
+
+{\sloppy
+\printbibliography[heading=bibintoc]
+\fussy
+}
+
+\end{document}
