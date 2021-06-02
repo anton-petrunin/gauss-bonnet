@@ -1,214 +1,168 @@
 \documentclass[oneside,a4paper]{amsart}
 %\usepackage{maa-monthly}
 \usepackage{gauss-bonnet}
-\usepackage{amsmath, amsfonts}
-\usepackage{amsthm}
-\newtheorem{exer}[thm]{Exercise}
-\newtheorem{prob}[thm]{Problem}
 %\usepackage[russian,english]{babel}
 %\usepackage[utf8]{inputenc}
 
 \begin{document}
 
-\title{An exercise on the comparison theorem}
+\title{Self-crossings of closed geodesics}
 \author{Anton Petrunin and Sergio Zamora Barrera}
 %\address{Anton Petrunin,  Math. Dept., PSU, University Park,  PA 16802, USA.}
 %\address{aqp6@psu.edu}
 %\address{Sergio Zamora Barrera,  Math. Dept., PSU,University Park,  PA 16802, USA.}
 %\address{sxz38@psu.edu}
 
-\keywords{discrete minimal surface, polyhedral surface, area minimizing surface, minimal surface.}
+%\keywords{discrete minimal surface, polyhedral surface, area minimizing surface, minimal surface.}
 \maketitle
 
+\section{Introduction}
 
-A famous interpretation of curvature is the following: ``In the presence of positive curvature, triangles are fat, and in the presence of negative curvature, triangles are thin.'' This can be stated more precisely (see Theorems \ref{B} and \ref{C}). Here we briefly discuss some consequences of this phenomenon in how geodesics in surfaces intersect.
 
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[scale=0.9]{P1.jpg}\\
-\end{center}
+The rubber bend on the picture is pulled around a pebble,
+and it crosses it-self at several points.
+\begin{figure}[!ht]
+\begin{minipage}{.64\textwidth}
+\centering
+\includegraphics[width=\textwidth]{pics/pebble.jpg}
+\end{minipage}\hfill
+\begin{minipage}{.34\textwidth}
+\centering
+\includegraphics{mppics/pic-50}
+\end{minipage}
 \end{figure}
+The combinatorics of self-crossings can be described by  closed plane curve.
+To do this, look at the curve that rubber band follow in a plane parametrization of the surface with one point removed.
+For example, the self-crossings of rubber band on the picture can be described by the plane curves on the right diagram;
+one has to turn it around to see it.
 
-
-
-\begin{thm}\label{A}
-Let $\Sigma \subset \mathbb{R}^3$ be a smooth complete simply connected surface with Gaussian curvature $K : \Sigma \to \mathbb{R}$.
-\begin{itemize}
-\item If $K\leq 0$, then $\Sigma$ is diffeomorphic to $\mathbb{R}^2$.
-\item If $K \geq 0$, then $\Sigma$ is diffeomorphic to $\mathbb{S}^2$ or $\mathbb{R}^2$. In the former case, $\int_{\Sigma} K dA = 4 \pi$ and we say that $\Sigma$ is closed. In the latter case, $\int_{\Sigma} K dA \leq 2 \pi$, and we say that $\Sigma$ is open.
-\end{itemize}
+\begin{thm}{Problem} What are the possible combinatoric types of self-crossings of rubber band for all possible pebbles; we assume that the pebble is strictly convex and its surface is smooth
+and frictionless.
 \end{thm}
 
-\section*{Comparison Theorems}
+For sure the rubber band should be understood as closed geodesic on smooth strictly convex surface.
 
-Throughout this note, we will call a smooth complete simply connected surface $\Sigma \subset \mathbb{R}^3$ with either $K \geq 0$ or $K \leq 0$ an \textit{Alexandrov surface}. As a consequence of Theorem \ref{A} and the Jordan Curve Theorem, every simple closed curve $\gamma$ in an Alexandrov surface $\Sigma$ separates it in two regions, from which at least one of them is homeomorphic to a disk $D$ with $\partial D = \gamma$.
+This problem is exotic, but it makes a good exercise.
+One one hand, it could be explained informally to anyone.
+On the other hand, if a motivated student starts to think about this problem on an isolated island, then he will have to rediscover  a considerable part of the differential geometry of surfaces.
+Or, one could use this problem to measure progress while taking an introductory course of differential geometry.
 
+As you will see, configurations with at most 3 double self-crossings is already interesting;
+the solutions are short, but require creativity.
 
-
-\begin{figure}[h]
+The following diagram shows all possible paterns with exactly 3 double self-crossings.
+\begin{figure}[ht!]
 \begin{center}
-\includegraphics[scale=0.9]{P2.jpg}\\
+\includegraphics{mppics/pic-55}
 \end{center}
 \end{figure}
+All except the last two can be realized by a closed geodesic on a smooth strictly convex closed surface.
 
-We define a \textit{polygon} in a smooth surface $\Sigma \subset \mathbb{R}^3$ to be a subset $P$ homeomorphic to a closed disk with $\partial P$ a piecewise smooth curve such that each smooth piece (called \textit{side}) is a geodesic. A polygon of 3 (resp. 1, 4, or 5) sides will be called a \textit{triangle} (resp. \textit{monogon}, \textit{cuadrangle,} or \textit{pentagon}).
+Construction of some of these examples require ingenuity,
+but, the forbidden examples make mathematicians way more happier.
+(It is strange that mathematicians like to forbid, is not it?)
 
+In this note we will discuss the two forbidden examples --- fifth and sixth.
+The proofs require Gauss--Bonnet formula and Alexandrov comparison theorem respectively.
+Both of these statements are briefly discussed in the following sectio.
 
-\begin{figure}[h]
-\begin{center}
-\includegraphics[scale=0.9]{P3.jpg}\\
-\end{center}
+\section*{Comparison theorems}
+
+Further we assume that $\Sigma$ is a closed strictly convex surface;
+in particular, $\Sigma$ is homeomorphic to the sphere and has strictly positive Gauss curvature.
+
+Suppose that $\Delta$ is an $n$-gon on $\Sigma$ with geodesic sides.
+From the \emph{Gauss--Bonnet formula} it follows that sum of the internal angles of $\Delta$ cannot be smaller than $(n\z-2)\cdot\pi$.
+Also the Gauss--Bonnet formula implies that the integral of Gauss curvature along the whole $\Sigma$ is exactly $4\cdot\pi$.
+
+In particular, if $\Delta$ is a triangle with angles $\alpha$, $\beta$, and $\gamma$, then
+\[\alpha+\beta+\gamma>\pi.\leqno({*})\]
+
+If we assume in addition that the sides of $\Delta$ are length minimizing geodesics among the curves in $\Delta$ with the same endpoints, then the inequality $({*})$ can be made more exact.
+
+Namely consider the so-called \emph{model triangle} $\tilde\Delta$ of $\Delta$; that is, $\tilde\Delta$ is a plane triangle with equal corresponding sides.
+Since the sides are length-minimizing in $\Delta$, they satisfy the triangle inequality; therefore the model triangle is defined.
+
+Denote bu $\tilde \alpha$, $\tilde \beta$ and $\tilde \gamma$ the angles of $\tilde\Delta$ respectively.
+Then 
+\[
+\alpha> \tilde \alpha,
+\qquad
+\beta> \tilde \beta,
+\qquad
+\text{and}
+\qquad
+\gamma> \tilde \gamma.
+\leqno({*}{*})
+\]
+Since $\tilde\alpha+\tilde\beta+\tilde\gamma=\pi$, this inequality implies $({*})$.
+
+The inequality $({*}{*})$ easily follows from the proof of the \emph{Alexandrov--Toponogov comparison theorem}.
+We leave it as an exercise to those who knows this proof;
+the rest of the readers should simply believe that it is true.
+
+\section*{Fifth configuration}
+
+\begin{wrapfigure}{r}{40 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-3}
+\end{wrapfigure}
+
+Let us show that the fifth configuration is impossible.
+Suppose there is a geodesic of with self-crossings as on the diagram;
+it divides the surface $\Sigma$ into one triangle, say $\Delta$, one hexagon and three monogons.
+Denote by $\alpha$, $\beta$, and $\gamma$ the internal angles of $\Delta$.
+
+Note that three monogons have internal angles $\alpha$, $\beta$, and $\gamma$ respectively.
+By Gauss--Bonnet formula, the integral of Gauss curvature along each monogon is $\pi+\alpha$, $\pi+\beta$, and $\pi+\gamma$ respectively.
+By $({*})$ the integral of Gauss curvature along the whole $\Sigma$ exceeds $4\cdot \pi$ --- a contradiction.
+
+\section*{Sixth configuration}
+
+Arguing by contradiction, suppose that $\Sigma$ contains such a geodesic $\gamma$;
+assume that arcs and angles are labeled as on the left diagram.
+
+\begin{figure}[!ht]
+\begin{minipage}{.38\textwidth}
+\centering
+\includegraphics{mppics/pic-472}
+\end{minipage}\hfill
+\begin{minipage}{.58\textwidth}
+\centering
+\includegraphics{mppics/pic-473}
+\end{minipage}
 \end{figure}
 
 
-\begin{thm}\label{B}
-Let $P$ be a polygon of $n$-sides in a smooth surface, and let $\Theta$ be the sum of the interior angles of $P$. Then
-$$  \Theta = (n-2) \pi + \int_P K dA. $$
-\end{thm}
-
-\begin{thm}\label{C}
-Let $P$ be a triangle in an Alexandrov surface with vertices $A, B, C$ and assume each side is a shortest path between its endpoints. Let $\alpha , \beta , \gamma$ be the interior angles of $P$ at $A,B,C$, respectively. Construct a triangle $A'B'C'$ in $\mathbb{R}^2$ with equal corresponding sidelengths as $P$ and let $\alpha ' ,\beta ' , \gamma ' $ be its interior angles at $A' , B'  , C' $, respectively.
-\begin{itemize}
-\item If $K \geq 0$, then $\alpha \geq \alpha '$, $\beta \geq \beta '$, $\gamma \geq \gamma '$.
-\item If $K \leq 0$, then $\alpha \leq \alpha '$, $\beta \leq \beta '$, $\gamma \leq \gamma '$.
-\end{itemize}
-\end{thm}
-
-\section*{Geodesic Configurations}
-
-Using these two theorems, it is not hard to deduce that some geodesic configurations cannot occur in certain Alexandrov surfaces.
-
-\begin{exer}\label{neg}
-Let $\Sigma\subset \mathbb{R}^3$ be an Alexandrov surface $K \leq 0$ and let $D\subset \mathbb{R}^2$ be the unit disk.
-\begin{enumerate}
-\item  Show that a geodesic cannot self intersect.
-\item  Show that two distinct geodesics cannot intersect twice.
-\end{enumerate}
-\end{exer}
-
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[scale=0.7]{P4.jpg}\\
-\end{center}
-\end{figure}
-
-
-Exercise \ref{neg} states that the intersection pattern of any one or two geodesics in an Alexandrov surface with $K \leq 0 $ is very simple. If $K \geq 0$, the situation is way more interesting and direct applications of Theorems \ref{B} and \ref{C} are usually not enough to understand how geodesics can intersect.
-
-\begin{exer}
-Let $\Sigma$ be an Alexandrov surface with $K \geq 0$. 
-\begin{itemize}
-\item Show that no geodesic segment in $\Sigma $ can have the following intersection configuration.
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[scale=0.9]{P5.jpg}\\
-\end{center}
-\end{figure}
-
-\item Show that if $\Sigma$ is open, a geodesic segment cannot have the intersection patterns from the figures below.
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[scale=0.5]{P6.jpg}\\
-\end{center}
-\end{figure}
-
-\item Give an example of an open Alexandrov surface and a geodesic in it that self intersects infinitely many times. Try to describe such intersection configuration.
-\end{itemize}
-\end{exer}
-
-We now provide a couple of examples of how to exploit Theorems \ref{B} and \ref{C} in order to understand geodesic intersection patterns.
-
-\begin{prob}\label{D}
-Let $\Sigma$ be a closed Alexandrov surface with $K > 0$. Then no closed geodesic can have the following intersection pattern.
-\end{prob}
-
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[scale=0.9]{P7.jpg}\\
-\end{center}
-\end{figure}
-
-
-\textit{Solution:} Let $\alpha, \beta, \gamma$ the angles labeled in the figure. Since they are the interior of a triangle in a surface with $K > 0$, $\alpha + \beta + \gamma > \pi$ by Theorem \ref{B}. Let $P_A, P_B, P_C$ be the monogons with interior angles $\alpha, \beta, \gamma$, respectively. By Theorem \ref{B},
-\begin{eqnarray}
-\int_{\Sigma }K dA & > & \int_{P_A}K dA + \int_{P_B}K dA + \int_{P_C}K dA \\
-& = & (\pi + \alpha ) + (\pi + \beta ) + (\pi + \gamma )\\
-& > & 4 \pi ,
-\end{eqnarray}
-contradicting Theorem \ref{A}.
-
-Note that Problem \ref{D} is not true if one only assumes $K \geq 0$ instead of $K > 0$. An example could be guessed by taking the boundary surface of a thin triangular prism and smoothing it out a little.
-
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[scale=0.9]{P8.jpg}\\
-\end{center}
-\end{figure}
-
-\begin{prob}
-Let $\Sigma$ be a closed Alexandrov surface with $K \geq 0$. Then no closed geodesic an have the following intersection pattern.
-\end{prob}
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[scale=0.9]{P9.jpg}\\
-\end{center}
-\end{figure}
-
-\textit{Solution:}  Arguing by contradiction, suppose that $\Sigma$ contains such a geodesic $\gamma$;
- we label the arcs and angles as on the left diagram.
-
-%\begin{figure}[!ht]
-%\begin{minipage}{.38\textwidth}
-%\centering
-%\includegraphics{mppics/pic-472}
-%\end{minipage}\hfill
-%\begin{minipage}{.58\textwidth}
-%\centering
-%\includegraphics{mppics/pic-473}
-%\end{minipage}
-%\end{figure}
-
-
-Applying Theorem \ref{B} to the quadrangle $xcab$ and the pentagon $azbcy$, we get respectively,
-\[2\cdot\alpha\le\beta+\gamma
+Applying the Gauss--Bonnet formula to the quadrangle and pentagon that the geodesic cuts from $\Sigma$, we get that
+\[2\cdot\alpha<\beta+\gamma
 \qquad\text{and} \qquad
-2\cdot\beta+2\cdot \gamma\le\pi+\alpha.\leqno(\asterism)\]
-It follows that $\alpha \le\tfrac \pi 3$.
+2\cdot\beta+2\cdot \gamma<\pi+\alpha.\leqno(\asterism)\]
+It follows that $\alpha <\tfrac \pi 3$.
 
 
-Consider the part of the geodesic $\gamma$ without the arc~$a$.
+Consider the part of $\gamma$ without the arc~$a$.
 It cuts from $\Sigma$ a pentagon $\Delta$ with sides and angles shown on the diagram on the right.
 
-%\begin{wrapfigure}{r}{50 mm}
-%\vskip-0mm
-%\centering
-%\includegraphics{mppics/pic-474}
-%\vskip8mm
-%\end{wrapfigure}
+\begin{wrapfigure}{r}{50 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-474}
+\bigskip
+\includegraphics{mppics/pic-500}
+\vskip8mm
+\end{wrapfigure}
 
-Since small segments of any geodesic on $\Sigma$ are length minimizing, we can add additional vertices to the sides of $\Delta$ so that each side becomes length-minimizing.
+Let us add additional vertices of the sides of $\Delta$ so that each side becomes length-minimizing.
 Choose a vertex $v$ and subdivide $\Delta$ into triangles by joining $v$ to other vertices of the broken geodesic.
 
-Consider a model triangle for each triangle in the subdivision so that they share sides as in $\Delta$.
+Consider a model triangle for each triangle in the subdivision so that they shared sides as in $\Delta$.
 By the comparison inequality $({*}{*})$, the angles of the model triangles do not exceed the corresponding angles of the original triangle.
-Therefore the model triangles form a plane pentagon $\tilde\Delta$ with convex polygonal sides.
-Moreover its angles do not exceed the corresponding angles of $\Delta$.
+Therefore the model triangles form a plane polygon $\tilde\Delta$ is convex.
+Moreover, the five angles of $\tilde\Delta$ that correspond to angles of $\Delta$ do not exceed those. 
 
-%\begin{wrapfigure}{r}{50 mm}
-%\vskip-4mm
-%\centering
-%\includegraphics{mppics/pic-500}
-%\vskip0mm
-%\end{wrapfigure}
-
-It remains to show the described plane polygon does not exist.
+It remains to show described plane polygogon does not exist.
 Let us orient its  sides counterclockwise;
 denote the obtained vectors by $s_1,\dots,s_k$.
 
@@ -220,6 +174,8 @@ Observe that $(\asterism)$ implies that $r\ne 0$,
 and, moreover, 
 \[\langle r,s_1\rangle+\dots+\langle r,s_k\rangle>0,\]
 but  $s_1+\dots+s_k=0$ --- a contradiction.
+
+
 
 
 {\sloppy

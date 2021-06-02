@@ -46,29 +46,128 @@ draw p0;
 endfig;
 
 beginfig(3) 
+save u,p,k,l;
+path p[];
+u:=1.2cm;
+k:=-1.8;
+l:=2.2;
+
+z0=(0,0)*u;
+z1=(1,0)*u;
+z2=(2,0)*u;
+z3=(3,0)*u;
+z4=(4,0)*u;
+z5=(5,0)*u;
+
+z.a=(0,.8)*u;
+z.b=z.a rotated 120;
+z.c=z.a rotated -120;
+
+
+p5=z.a..z.b..l*z.b{z.b rotated -90}..z.b..z.c..l*z.c{z.c rotated -90}..z.c..z.a..l*z.a{z.a rotated -90}..cycle;
+
+
+p1= circle(origin,8) rotated -0 shifted z.a cutbefore (subpath (0,1) of p5) cutafter (subpath (6,7) of p5) ; 
+draw p1;
+draw p1 rotated 120;
+draw p1 rotated -120;
+
+draw p5 pensemibold;
+
+label.bot(btex $\alpha$ etex, z.a+(0,-9));
+label.urt(btex $\beta$ etex, z.b +(6,2));
+label.ulft(btex $\gamma$ etex, z.c +(-6,2));
+endfig;
+
+beginfig(50) 
 save u,p;
 path p[];
 u:=1cm;
 
-z0=(1,0)*u rotated 45;
+z0=(0,0)*u;
+z1=(1,0)*u;
+z2=(2,0)*u;
+z3=(3,0)*u;
 
-for i =1 step 1 until 12:
-z[i]=z[i-1] rotated 30;
-endfor
+p0=z0{1,2}..z2{down}..z0{-1,2}..z3{-1,-2}..z1{up}..z3{1,-2}..cycle;
 
-p0=
-z2{z2}..
-z1{-z1}..
-z6{z6}..
-z5{-z5}..
-z10{z10}..
-z9{-z9}..
-cycle;
-
-draw p0;
-
-%dOt z0,z1,z2,z3,z4,z5,z6,z7,z8,z9;
+draw p0 pensemibold;
 endfig;
+
+beginfig(55) 
+save u,p,k,l;
+path p[];
+u:=.7cm;
+k:=-1.8;
+l:=2.2;
+
+z0=(0,0)*u;
+z1=(1,0)*u;
+z2=(2,0)*u;
+z3=(3,0)*u;
+z4=(4,0)*u;
+z5=(5,0)*u;
+
+z.a=(0,-.8)*u;
+z.b=z.a rotated 120;
+z.c=z.a rotated -120;
+
+z.shift=(5,0)*u;
+z.shifty=(0,-3)*u;
+
+p1=
+z0{up}..
+z1{1,-2}..
+z2{1,2}..
+z3{1,-2}..
+z4{up}..
+z3{-1,-2}..
+z2{-1,2}..
+z1{-1,-2}..cycle;
+
+p2=
+z0{up}..
+z1{1,-2}..
+z2{1,2}..
+z4{-1,-2}..
+z3{up}..
+z4{1,-2}..
+z2{-1,2}..
+z1{-1,-2}..cycle;
+
+p3=
+z0{up}..
+z1{1,-2}..
+z4{-1,2}..
+z2{1,-2}..
+z3{up}..
+z2{-1,-2}..
+z4{1,2}..
+z1{-1,-2}..cycle;
+
+p4=z.a..z.b..k*z.a..z.c..z.a..k*z.c..z.b..z.c..k*z.b..cycle;
+
+p5=z.a..z.b..l*z.b{z.b rotated -90}..z.b..z.c..l*z.c{z.c rotated -90}..z.c..z.a..l*z.a{z.a rotated -90}..cycle;
+
+p6=
+z0{up}..z1{1,-2}..z4{1,2}..z5{down}..z4{-1,2}..z2{down}..z3{up}..z1{-1,-2}..cycle
+;
+
+draw p1 pensemibold;
+draw p2 shifted z.shift pensemibold;
+draw p3 shifted (2*z.shift) pensemibold;
+draw p4 shifted (z.shifty+z2) pensemibold;
+draw p5 rotated 180 shifted (z.shifty+z2+z.shift) pensemibold;
+draw p6 shifted (z.shifty+2*z.shift) pensemibold;
+
+label.bot(btex $1$ etex, z2+(0,20));
+label(btex $2$ etex, .6[z2,z3]+z.shift);
+label(btex $3$ etex, .6[z1,z2]+2*z.shift);
+label(btex $4$ etex, z.shifty+z2);
+label(btex $5$ etex, z.shifty+z2+z.shift);
+label(btex $6$ etex, .5[z2,z3]+z.shifty+2*z.shift);
+endfig;
+
 
 beginfig(472) 
 save u,p;
