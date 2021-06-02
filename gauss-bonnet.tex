@@ -5,6 +5,8 @@
 %\usepackage[utf8]{inputenc}
 
 \begin{document}
+%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
+
 
 \title{Self-crossings of closed geodesics}
 \author{Anton Petrunin and Sergio Zamora Barrera}
@@ -20,7 +22,7 @@
 
 
 The rubber bend on the picture is pulled around a pebble,
-and it crosses it-self at several points.
+and it crosses itself at several points.
 \begin{figure}[!ht]
 \begin{minipage}{.64\textwidth}
 \centering
@@ -31,57 +33,70 @@ and it crosses it-self at several points.
 \includegraphics{mppics/pic-50}
 \end{minipage}
 \end{figure}
-The combinatorics of self-crossings can be described by  closed plane curve.
-To do this, look at the curve that rubber band follow in a plane parametrization of the surface with one point removed.
-For example, the self-crossings of rubber band on the picture can be described by the plane curves on the right diagram;
-one has to turn it around to see it.
+The combinatorics of self-crossings can be described by a closed plane curve.
+To do this, look at the curve that the rubber band follows in a plane parametrization of the surface with one point removed.
+For example, if you could turn the pebble around you would see that self-crossings of the rubber band on the picture can be described by the plane curves on the right diagram.
 
-\begin{thm}{Problem} What are the possible combinatoric types of self-crossings of rubber band for all possible pebbles; we assume that the pebble is strictly convex and its surface is smooth
-and frictionless.
+Suppose that we are interested in possible patterns of self-crossings.
+The rubber band should be understood as a closed geodesic on a smooth strictly convex surface;
+it means that we are interested in the following:
+
+
+\begin{thm}{Question} What are the possible combinatoric types of self-crossings of closed geodesic on a strictly convex smooth closed surface?
 \end{thm}
 
-For sure the rubber band should be understood as closed geodesic on smooth strictly convex surface.
+It is a good exercise --- it could be explained to anyone, but if a motivated student starts to think about it, then he will have to rediscover  a considerable part of the differential geometry of surfaces.
 
-This problem is exotic, but it makes a good exercise.
-One one hand, it could be explained informally to anyone.
-On the other hand, if a motivated student starts to think about this problem on an isolated island, then he will have to rediscover  a considerable part of the differential geometry of surfaces.
-Or, one could use this problem to measure progress while taking an introductory course of differential geometry.
-
-As you will see, configurations with at most 3 double self-crossings is already interesting;
-the solutions are short, but require creativity.
-
-The following diagram shows all possible paterns with exactly 3 double self-crossings.
+We will discuss \emph{forbidden} configurations with 3 double self-crossings;
+that is, configurations that cannot appear for closed geodesic of a strictly convex closed surface. 
+These are configurations 5 and 6 on the following diagram.
 \begin{figure}[ht!]
 \begin{center}
 \includegraphics{mppics/pic-55}
 \end{center}
 \end{figure}
-All except the last two can be realized by a closed geodesic on a smooth strictly convex closed surface.
+Showing the possibility of configurations 1--4 requires some ingenuity,
+but, the forbidden examples make mathematicians happier.
+(Mathematicians like to forbid, is not it strange?)
 
-Construction of some of these examples require ingenuity,
-but, the forbidden examples make mathematicians way more happier.
-(It is strange that mathematicians like to forbid, is not it?)
+The reader is welcome to try other cases, but the general question seems to be hard;
+we do not expect to see a complete classification in our lifetime.
 
-In this note we will discuss the two forbidden examples --- fifth and sixth.
-The proofs require Gauss--Bonnet formula and Alexandrov comparison theorem respectively.
-Both of these statements are briefly discussed in the following sectio.
+In the remaining text, we briefly discuss Gauss--Bonnet formula and Alexandrov--Toponogov theorem and apply them to forbid configurations 5 and 6.
 
-\section*{Comparison theorems}
+\section*{Gauss--Bonnet and no 5}
 
 Further we assume that $\Sigma$ is a closed strictly convex surface;
 in particular, $\Sigma$ is homeomorphic to the sphere and has strictly positive Gauss curvature.
 
 Suppose that $\Delta$ is an $n$-gon on $\Sigma$ with geodesic sides.
-From the \emph{Gauss--Bonnet formula} it follows that sum of the internal angles of $\Delta$ cannot be smaller than $(n\z-2)\cdot\pi$.
-Also the Gauss--Bonnet formula implies that the integral of Gauss curvature along the whole $\Sigma$ is exactly $4\cdot\pi$.
-
+From the \emph{Gauss--Bonnet formula} it follows that the sum of the internal angles of $\Delta$ cannot be smaller than $(n\z-2)\cdot\pi$.
 In particular, if $\Delta$ is a triangle with angles $\alpha$, $\beta$, and $\gamma$, then
 \[\alpha+\beta+\gamma>\pi.\leqno({*})\]
+Also the Gauss--Bonnet formula implies that the integral of Gauss curvature along the whole $\Sigma$ is exactly $4\cdot\pi$.
 
-If we assume in addition that the sides of $\Delta$ are length minimizing geodesics among the curves in $\Delta$ with the same endpoints, then the inequality $({*})$ can be made more exact.
+\begin{wrapfigure}{r}{40 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-3}
+\end{wrapfigure}
+
+\parit{Let us show that configuration no 5 is forbidden.}
+Suppose there is a geodesic of with self-crossings as on the diagram;
+it divides the surface $\Sigma$ into one triangle, say $\Delta$, one hexagon and three monogons.
+Denote by $\alpha$, $\beta$, and $\gamma$ the internal angles of $\Delta$.
+
+Note that three monogons have internal angles $\alpha$, $\beta$, and $\gamma$ respectively.
+By Gauss--Bonnet formula, the integral of Gauss curvature along each monogon is $\pi+\alpha$, $\pi+\beta$, and $\pi+\gamma$ respectively.
+By $({*})$ the integral of Gauss curvature along the whole $\Sigma$ exceeds $4\cdot \pi$ --- a contradiction.
+
+\section*{Alexandrov--Toponogov and no 6}
+
+Let $\Delta$ be a geodesic triangle with angles $\alpha$, $\beta$, and $\gamma$ on the surface $\Sigma$.
+Assume that the sides of $\Delta$ are length minimizing geodesics among the curves in $\Delta$ with the same endpoints, then the inequality $({*})$ can be made more exact.
 
 Namely consider the so-called \emph{model triangle} $\tilde\Delta$ of $\Delta$; that is, $\tilde\Delta$ is a plane triangle with equal corresponding sides.
-Since the sides are length-minimizing in $\Delta$, they satisfy the triangle inequality; therefore the model triangle is defined.
+Since the sides are length-minimizing, they satisfy the triangle inequality; therefore the model triangle is defined.
 
 Denote bu $\tilde \alpha$, $\tilde \beta$ and $\tilde \gamma$ the angles of $\tilde\Delta$ respectively.
 Then 
@@ -98,30 +113,8 @@ Then
 Since $\tilde\alpha+\tilde\beta+\tilde\gamma=\pi$, this inequality implies $({*})$.
 
 The inequality $({*}{*})$ easily follows from the proof of the \emph{Alexandrov--Toponogov comparison theorem}.
-We leave it as an exercise to those who knows this proof;
+We leave it as an exercise to those who know this proof;
 the rest of the readers should simply believe that it is true.
-
-\section*{Fifth configuration}
-
-\begin{wrapfigure}{r}{40 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-3}
-\end{wrapfigure}
-
-Let us show that the fifth configuration is impossible.
-Suppose there is a geodesic of with self-crossings as on the diagram;
-it divides the surface $\Sigma$ into one triangle, say $\Delta$, one hexagon and three monogons.
-Denote by $\alpha$, $\beta$, and $\gamma$ the internal angles of $\Delta$.
-
-Note that three monogons have internal angles $\alpha$, $\beta$, and $\gamma$ respectively.
-By Gauss--Bonnet formula, the integral of Gauss curvature along each monogon is $\pi+\alpha$, $\pi+\beta$, and $\pi+\gamma$ respectively.
-By $({*})$ the integral of Gauss curvature along the whole $\Sigma$ exceeds $4\cdot \pi$ --- a contradiction.
-
-\section*{Sixth configuration}
-
-Arguing by contradiction, suppose that $\Sigma$ contains such a geodesic $\gamma$;
-assume that arcs and angles are labeled as on the left diagram.
 
 \begin{figure}[!ht]
 \begin{minipage}{.38\textwidth}
@@ -134,6 +127,9 @@ assume that arcs and angles are labeled as on the left diagram.
 \end{minipage}
 \end{figure}
 
+\parit{Let us show that configuration no 6 is forbidden.}
+Arguing by contradiction, suppose that $\Sigma$ contains such a geodesic $\gamma$;
+assume that arcs and angles are labeled as on the left diagram.
 
 Applying the Gauss--Bonnet formula to the quadrangle and pentagon that the geodesic cuts from $\Sigma$, we get that
 \[2\cdot\alpha<\beta+\gamma
@@ -149,20 +145,25 @@ It cuts from $\Sigma$ a pentagon $\Delta$ with sides and angles shown on the dia
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-474}
-\bigskip
-\includegraphics{mppics/pic-500}
-\vskip8mm
 \end{wrapfigure}
 
-Let us add additional vertices of the sides of $\Delta$ so that each side becomes length-minimizing.
-Choose a vertex $v$ and subdivide $\Delta$ into triangles by joining $v$ to other vertices of the broken geodesic.
+Let us add additional vertices on the sides of $\Delta$ so that each side becomes length-minimizing.
+Choose a vertex $v$ and subdivide $\Delta$ into triangles with minimizing sides by joining $v$ to other vertices.
 
-Consider a model triangle for each triangle in the subdivision so that they shared sides as in $\Delta$.
+Consider a model triangle for each triangle in the subdivision;
+the model triangles lie in the plane and we suppose that they shared sides as in $\Delta$.
 By the comparison inequality $({*}{*})$, the angles of the model triangles do not exceed the corresponding angles of the original triangle.
-Therefore the model triangles form a plane polygon $\tilde\Delta$ is convex.
-Moreover, the five angles of $\tilde\Delta$ that correspond to angles of $\Delta$ do not exceed those. 
+Therefore the model triangles form a convex plane polygon $\tilde\Delta$.
+Moreover, the five angles of $\tilde\Delta$ that correspond to angles of $\Delta$ do not exceed those.
 
-It remains to show described plane polygogon does not exist.
+\begin{wrapfigure}{r}{50 mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-500}
+\vskip0mm
+\end{wrapfigure}
+
+It remains to show that the described plane polygon $\tilde\Delta$ does not exist.
 Let us orient its  sides counterclockwise;
 denote the obtained vectors by $s_1,\dots,s_k$.
 
@@ -172,8 +173,8 @@ Let $v$, $v'$, $w$, $w'$ be the marked unit vectors;
 set $r=v+v'+w+w'$.
 Observe that $(\asterism)$ implies that $r\ne 0$,
 and, moreover, 
-\[\langle r,s_1\rangle+\dots+\langle r,s_k\rangle>0,\]
-but  $s_1+\dots+s_k=0$ --- a contradiction.
+\[\langle r,s_1\rangle+\dots+\langle r,s_k\rangle>0.\]
+On the other hand, we have $s_1+\dots+s_k=0$ --- a contradiction.
 
 
 
