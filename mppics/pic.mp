@@ -296,6 +296,43 @@ dOt z0,z1,z2,z3,z4,z5,z6,z7,z8;
 label.rt (btex $v$ etex, z.a);
 endfig;
 
+beginfig(475) 
+save u,p,k;
+path p[];
+u:=1cm;
+k:=3;
+
+z.a=origin;
+z.b=(-2,-1)*u;
+z.c=(-1.9,1)*u;
+z.bb=(-4.1,-.6)*u;
+z.cc=(-4.05,.6)*u;
+
+p0=z.a{(z.b-z.a) rotated 5 }..z.b--z.b{(z.bb-z.b) rotated 5 }..z.bb--z.bb{(z.cc-z.bb) rotated 5 }..z.cc--z.cc{(z.c-z.cc) rotated 5}..z.c--z.c--cycle;
+
+
+z0= point 0 of p0;
+z1= point .5 of p0;
+z2= point 1 of p0;
+z3= point 2.5 of p0;
+z4= point 3 of p0;
+z5= point 5 of p0;
+z6= point 6.5 of p0;
+z7= point 7 of p0;
+z8= point 8.5 of p0;
+
+drawarrow z1--z0 pensemibold;
+drawarrow z2--z1 pensemibold;
+drawarrow z3--z2 pensemibold;
+drawarrow z4--z3 pensemibold;
+drawarrow z5--z4 pensemibold;
+drawarrow z6--z5 pensemibold;
+drawarrow z7--z6 pensemibold;
+drawarrow z8--z7 pensemibold;
+drawarrow z0--z8 pensemibold;
+
+endfig;
+
 beginfig(500) 
 save u,p,a,b,c,d;
 path p[];
@@ -355,5 +392,7 @@ label (btex $c$ etex rotated (angle(z.c+z.cc)), .4*(z.c+z.cc));
 label (btex $c+y$ etex rotated (angle(z.ccc+z.ca)), .4*(z.ccc+z.ca));
 label (btex $z$ etex , .4*(z.baa+z.caa));
 endfig;
+
+
 
 end

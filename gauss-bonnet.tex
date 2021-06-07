@@ -33,41 +33,45 @@ and it crosses itself at several points.
 \includegraphics{mppics/pic-50}
 \end{minipage}
 \end{figure}
-The combinatorics of self-crossings can be described by a closed plane curve.
-To do this, look at the curve that the rubber band follows in a plane parametrization of the surface with one point removed.
+The combinatorics of self-crossings can be described by a closed plane curve --- it is the curve that the rubber band follows in a plane parametrization of the surface with one point removed.
 For example, if you could turn the pebble around you would see that self-crossings of the rubber band on the picture can be described by the plane curves on the right diagram.
 
-Suppose that we are interested in possible patterns of self-crossings.
-The rubber band should be understood as a closed geodesic on a smooth strictly convex surface;
-it means that we are interested in the following:
+We assume that the pebble has stongly convex smooth frictionless boundary;
+so the rubber band models a closed geodesic on a smooth strongly convex surface.
+Suppose that we are interested in possible patterns of self-crossings; more precicely, the following question:
 
+\medskip
 
-\begin{thm}{Question} What are the possible combinatoric types of self-crossings of closed geodesic on a strictly convex smooth closed surface?
-\end{thm}
+\emph{What are the possible combinatoric types of self-crossings of closed geodesic on a strongly convex smooth closed surface?}
+
+\medskip
 
 It is a good exercise --- it could be explained to anyone, but if a motivated student starts to think about it, then he will have to rediscover  a considerable part of the differential geometry of surfaces.
 
-We will discuss \emph{forbidden} configurations with 3 double self-crossings;
-that is, configurations that cannot appear for closed geodesic of a strictly convex closed surface. 
-These are configurations 5 and 6 on the following diagram.
 \begin{figure}[ht!]
 \begin{center}
 \includegraphics{mppics/pic-55}
 \end{center}
 \end{figure}
+
+We will discuss \emph{forbidden} configurations with 3 double self-crossings;
+that is, configurations that cannot appear for closed geodesic of a strongly convex closed surface. 
+Among all the possible 6 patterns shown on the diagram,
+only two --- no 5 and 6 are forbidden.
 Showing the possibility of configurations 1--4 requires some ingenuity,
 but, the forbidden examples make mathematicians happier.
+
 (Mathematicians like to forbid, is not it strange?)
 
 The reader is welcome to try other cases, but the general question seems to be hard;
 we do not expect to see a complete classification in our lifetime.
 
 In what follows, we briefly discuss Gauss--Bonnet formula and Alexandrov--Toponogov theorem and apply them to forbid configurations 5 and 6.
-These theorems are discussed in our recent textbook \cite{petrunin-zamora} which we like, but there plenty other resources.
+These theorems are discussed in our textbook \cite{petrunin-zamora} which we like, but there plenty other resources.
 
 \section*{Gauss--Bonnet and no 5}
 
-Further we assume that $\Sigma$ is a closed strictly convex surface;
+Further we assume that $\Sigma$ is a closed strongly convex surface;
 in particular, $\Sigma$ is homeomorphic to the sphere and has strictly positive Gauss curvature.
 
 Suppose that $\Delta$ is an $n$-gon on $\Sigma$ with geodesic sides.
@@ -83,13 +87,14 @@ Also the Gauss--Bonnet formula implies that the integral of Gauss curvature alon
 \end{wrapfigure}
 
 \parit{Let us show that configuration no 5 is forbidden.}
-Suppose there is a geodesic of with self-crossings as on the diagram;
-it divides the surface $\Sigma$ into one triangle, say $\Delta$, one hexagon and three monogons.
+Suppose there is a geodesic with self-crossings as on the diagram;
+it divides the surface $\Sigma$ into one triangle, say $\Delta$, one hexagon, and three monogons.
 Denote by $\alpha$, $\beta$, and $\gamma$ the internal angles of $\Delta$.
 
 Note that three monogons have internal angles $\alpha$, $\beta$, and $\gamma$ respectively.
 By Gauss--Bonnet formula, the integral of Gauss curvature along each monogon is $\pi+\alpha$, $\pi+\beta$, and $\pi+\gamma$ respectively.
-By $({*})$ the integral of Gauss curvature along the whole $\Sigma$ exceeds $4\cdot \pi$ --- a contradiction.
+By $({*})$ the integral of Gauss curvature along the three monogons $\Sigma$ exceeds $4\cdot \pi$.
+But $4\cdot \pi$ is the integral of Gauss curvature along the \emph{whole} $\Sigma$  --- a contradiction.
 
 \section*{Alexandrov--Toponogov and no 6}
 
@@ -99,7 +104,7 @@ Assume that the sides of $\Delta$ are length minimizing geodesics among the curv
 Namely consider the so-called \emph{model triangle} $\tilde\Delta$ of $\Delta$; that is, $\tilde\Delta$ is a plane triangle with equal corresponding sides.
 Since the sides are length-minimizing, they satisfy the triangle inequality; therefore the model triangle is defined.
 
-Denote bu $\tilde \alpha$, $\tilde \beta$ and $\tilde \gamma$ the angles of $\tilde\Delta$ respectively.
+Denote by $\tilde \alpha$, $\tilde \beta$ and $\tilde \gamma$ the angles of $\tilde\Delta$ respectively.
 Then 
 \[
 \alpha> \tilde \alpha,
@@ -115,7 +120,7 @@ Since $\tilde\alpha+\tilde\beta+\tilde\gamma=\pi$, this inequality implies $({*}
 
 The inequality $({*}{*})$ easily follows from the proof of the \emph{Alexandrov--Toponogov comparison theorem}.
 We leave it as an exercise to those who know this proof;
-the rest of the readers should simply believe that it is true.
+the rest of the readers could simply believe that it is true.
 
 \begin{figure}[!ht]
 \begin{minipage}{.38\textwidth}
@@ -152,7 +157,7 @@ Let us add additional vertices on the sides of $\Delta$ so that each side become
 Choose a vertex $v$ and subdivide $\Delta$ into triangles with minimizing sides by joining $v$ to other vertices.
 
 Consider a model triangle for each triangle in the subdivision;
-the model triangles lie in the plane and we suppose that they shared sides as in $\Delta$.
+the model triangles lie in the plane and we suppose that they share sides as in $\Delta$.
 By the comparison inequality $({*}{*})$, the angles of the model triangles do not exceed the corresponding angles of the original triangle.
 Therefore the model triangles form a convex plane polygon $\tilde\Delta$.
 Moreover, the five angles of $\tilde\Delta$ that correspond to angles of $\Delta$ do not exceed those.
@@ -168,7 +173,7 @@ It remains to show that the described plane polygon $\tilde\Delta$ does not exis
 Let us orient its  sides counterclockwise;
 denote the obtained vectors by $s_1,\dots,s_k$.
 
-On the other hand, the conditions on the angles of polygons imply that the vectors $s_i$ point in the complement of white sectors shown with angles marked on the diagram.
+On one hand, the conditions on the angles of polygons imply that the vectors $s_i$ point in the complement of white sectors shown with angles marked on the diagram.
 The sum of magnitudes of the vectors in each black sector is also marked.
 Let $v$, $v'$, $w$, $w'$ be the marked unit vectors;
 set $r=v+v'+w+w'$.
