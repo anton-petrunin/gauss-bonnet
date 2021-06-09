@@ -34,19 +34,19 @@ and it crosses itself at several points.
 \end{minipage}
 \end{figure}
 The combinatorics of self-crossings can be described by a closed plane curve --- it is the curve that the rubber band follows in a plane parametrization of the surface with one point removed.
-For example, if you could turn the pebble around you would see that self-crossings of the rubber band on the picture can be described by the plane curves on the right diagram.
+For example, if you could turn the pebble around you would see that the self-crossings can be described by the plane curve on the right diagram.
 
-We assume that the pebble has a strongly convex smooth frictionless boundary;
-so the rubber band models a closed geodesic on a smooth strongly convex surface.
-Suppose that we are interested in possible patterns of self-crossings; more precisely, the following question:
-
-\medskip
-
-\emph{What are the possible combinatoric types of self-crossings of closed geodesic on a strongly convex smooth closed surface?}
+We assume that the surface of the pebble is strongly convex, smooth, and frictionless;
+in particular, the rubber band models a closed geodesic on a smooth strongly convex surface.
+Suppose that we are interested in possible patterns of self-crossings; more precisely:
 
 \medskip
 
-It is a good exercise --- it could be explained to anyone, but if a motivated student starts to think about it, then he will have to rediscover  a considerable part of the differential geometry of surfaces.
+\emph{What are the possible combinatoric types of self-crossings of a closed geodesic on a strongly convex smooth closed surface?}
+
+\medskip
+
+This question is a good exercise --- it could be explained to anyone, but if a motivated student starts to think about it, then he will have to rediscover  a considerable part of the differential geometry of surfaces.
 
 \begin{figure}[ht!]
 \begin{center}
@@ -57,17 +57,16 @@ It is a good exercise --- it could be explained to anyone, but if a motivated st
 We will discuss \emph{forbidden} configurations with 3 double self-crossings;
 that is, configurations that cannot appear for closed geodesic of a strongly convex closed surface. 
 Among all the possible 6 patterns shown on the diagram,
-only two --- no 5 and 6 are forbidden.
-Showing the possibility of configurations 1--4 requires some ingenuity,
+only two --- numbers 5 and 6 are forbidden.
+Showing the possibility of configurations 1, 2, 3, and 4 requires some ingenuity,
 but, the forbidden examples make mathematicians happier.
-
 (Mathematicians like to forbid, is not it strange?)
 
 The reader is welcome to try other cases, but the general question seems to be hard;
 we do not expect to see a complete classification in our lifetime.
 
 In what follows, we briefly discuss Gauss--Bonnet formula and Alexandrov--Toponogov theorem and apply them to forbid configurations 5 and 6.
-These theorems are discussed in our textbook \cite{petrunin-zamora} which we like, but there plenty of other resources.
+These theorems are discussed in our textbook \cite{petrunin-zamora} which we like and recommend, but there plenty of other resources.
 
 \section*{Gauss--Bonnet and no 5}
 
@@ -81,7 +80,7 @@ In particular, if $\Delta$ is a triangle with angles $\alpha$, $\beta$, and $\ga
 Also the Gauss--Bonnet formula implies that the integral of Gauss curvature along the whole $\Sigma$ is exactly $4\cdot\pi$.
 
 \begin{wrapfigure}{r}{40 mm}
-\vskip-0mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-3}
 \end{wrapfigure}
@@ -91,10 +90,12 @@ Suppose there is a geodesic with self-crossings as on the diagram;
 it divides the surface $\Sigma$ into one triangle, say $\Delta$, one hexagon, and three monogons.
 Denote by $\alpha$, $\beta$, and $\gamma$ the internal angles of $\Delta$.
 
-Note that three monogons have internal angles $\alpha$, $\beta$, and $\gamma$ respectively.
-By Gauss--Bonnet formula, the integral of Gauss curvature along each monogon is $\pi+\alpha$, $\pi+\beta$, and $\pi+\gamma$ respectively.
-By $({*})$ the integral of Gauss curvature along the three monogons $\Sigma$ exceeds $4\cdot \pi$.
-But $4\cdot \pi$ is the integral of Gauss curvature along the \emph{whole} $\Sigma$  --- a contradiction.
+Note that three monogons have internal angles $\alpha$, $\beta$, and $\gamma$.
+By Gauss--Bonnet formula, the integral of Gauss curvature along each monogon is 
+$$\pi\z+\alpha,\quad \pi\z+\beta,\quad \text{and}\quad \pi\z+\gamma$$ 
+respectively.
+By $({*})$ the integral of Gauss curvature along the three monogons exceeds $4\cdot \pi$.
+But $4\cdot \pi$ is the integral of Gauss curvature along the \emph{whole} surface  --- a contradiction.
 
 \section*{Alexandrov--Toponogov and no 6}
 
@@ -134,7 +135,7 @@ the rest of the readers could simply believe that it is true.
 \end{figure}
 
 \parit{Let us show that configuration no 6 is forbidden.}
-Arguing by contradiction, suppose that $\Sigma$ contains such a geodesic $\gamma$;
+Arguing by contradiction, suppose that the surface $\Sigma$ contains such a geodesic $\gamma$;
 assume that arcs and angles are labeled as on the left diagram.
 
 Applying the Gauss--Bonnet formula to the quadrangle and pentagon that the geodesic cuts from $\Sigma$, we get that
@@ -144,7 +145,7 @@ Applying the Gauss--Bonnet formula to the quadrangle and pentagon that the geode
 It follows that $\alpha <\tfrac \pi 3$.
 
 
-Consider the part of $\gamma$ without the arc~$a$.
+Consider the part of $\gamma$ without the arc labeled by~$a$.
 It cuts from $\Sigma$ a pentagon $\Delta$ with sides and angles shown on the diagram on the right.
 
 \begin{wrapfigure}{r}{50 mm}
@@ -180,7 +181,9 @@ set $r=v+v'+w+w'$.
 Observe that $(\asterism)$ implies that $r\ne 0$,
 and, moreover, 
 \[\langle r,s_1\rangle+\dots+\langle r,s_k\rangle>0.\]
-On the other hand, we have $s_1+\dots+s_k=0$ --- a contradiction.
+On the other hand, the vectors $s_i$ circumambulate a polygon; therefore, 
+\[s_1+\dots+s_k=0\]
+--- a contradiction.
 
 
 
