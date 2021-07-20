@@ -48,7 +48,7 @@ endfig;
 beginfig(3) 
 save u,p,k,l;
 path p[];
-u:=1.2cm;
+u:=1cm;
 k:=-1.8;
 l:=2.2;
 
