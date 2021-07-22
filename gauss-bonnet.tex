@@ -32,11 +32,11 @@ and it crosses itself at several points.
 \end{minipage}
 \hfill
 \end{figure}
-The combinatorics of self-crossings can be described by a closed plane curve --- it is the rubber band in a plane parametrization of the surface with one point removed.
+The combinatorics of self-crossings can be described by a closed plane curve --- it is the rubber band in a parametrization of the surface with one point removed.
 For example, if you could turn the pebble around you would see that the self-crossings are described by the plane curve on the right diagram.
 
 We assume that the surface of the pebble is strongly convex, smooth, and frictionless;
-in this case, the rubber band models a closed geodesic on a smooth strongly convex surface.
+in this case, the rubber band models a closed geodesic.
 Suppose that we are interested in possible patterns of self-crossings; more precisely:
 
 \medskip
@@ -49,29 +49,36 @@ Suppose that we are interested in possible patterns of self-crossings; more prec
 \end{center}
 \end{figure}
 
-We will discuss \emph{forbidden} configurations with 3 double self-crossings;
+Consider all the possible 6 patterns shown on the diagram with three double self-crossings.
+The configurations 1, 2, 3, and 4 can be realized as mirror-symmetric geodesics on mirror-symmetric surfaces; the projections on the plane of symmetry are sketched.
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics{mppics/pic-100}
+\end{center}
+\end{figure}
+
+Further, we will discuss \emph{forbidden} configurations;
 that is, configurations that cannot appear for closed geodesic. 
-Among all the possible 6 patterns shown on the diagram,
-only two --- numbers 5 and 6 are forbidden.
-Showing the possibility of configurations 1, 2, 3, and 4 requires some ingenuity,
-but, the forbidden examples make mathematicians happier.
-(We like to forbid, is not it strange?)
+These are numbers 5 and 6 on the diagram.
 
 This question is a good exercise --- it could be explained to anyone, but if a motivated student starts to think about it, then he will have to rediscover a considerable part of the differential geometry of surfaces.
-The reader is welcome to try the cases with more self-intersections, but the general question seems to be hard;
+The reader is welcome to try the cases with more self-crossings, but the general question seems to be hard;
 I do not expect to see a complete classification in my lifetime.
+Our question is closely related to the so-called \emph{flat knot types} of geodesics;
+see \cite{angenent} and the references therein.
 
 In what follows, we discuss Gauss--Bonnet formula and Alexandrov--Toponogov theorem and apply them to forbid configurations 5 and 6.
-These theorems are covered in our textbook \cite{petrunin-zamora} which I like, but there plenty of other resources.
+These theorems are covered in our textbook \cite{petrunin-zamora} which I like, but there are plenty of other resources.
+
 
 \section*{Gauss--Bonnet and no 5}
 
-Suppose that $\Delta$ is an $n$-gon with geodesic sides in the surface $\Sigma$.
-Recall that by \emph{Gauss--Bonnet formula} the sum of the external angles of $\Delta$ is
+Suppose that $\Delta$ is an $n$-gon with geodesic sides in a surface $\Sigma$.
+Recall that by \emph{Gauss--Bonnet formula} the sum of the external angles of $\Delta$ equals to
 \[2\cdot\pi\cdot\chi(\Delta)-\int\limits_\Delta K,\]
 where $\chi(\Delta)$ denotes the \emph{Euler characteristic} of $\Delta$ and $K$ --- Gauss curvature of $\Sigma$.
 
-Further we assume that $\Sigma$ is a closed strongly convex surface. In this case
+Further, we assume that $\Sigma$ is a closed strongly convex surface. In this case,
 \begin{itemize}
  \item $\Sigma$ has strictly positive Gauss curvature;
  \item $\Sigma$ is homeomorphic to the sphere and therefore $\chi(\Sigma)=2$;
@@ -92,7 +99,7 @@ the integral of Gauss curvature along  $\Sigma$ is exactly $4\cdot\pi$.
 \includegraphics{mppics/pic-3}
 \end{wrapfigure}
 
-\parit{Configuration no 5 is forbidden.}
+\parit{No 5 is forbidden.}
 Suppose there is a geodesic with self-crossings as on the diagram;
 it divides the surface $\Sigma$ into one triangle, say $\Delta$, one hexagon, and three monogons.
 Denote by $\alpha$, $\beta$, and $\gamma$ the internal angles of $\Delta$.
@@ -129,23 +136,12 @@ Then
 Since $\tilde\alpha+\tilde\beta+\tilde\gamma=\pi$, this inequality implies $({*})$.
 
 The inequality $({*}{*})$ easily follows from the proof of the \emph{Alexandrov--Toponogov theorem}.
-The latter states that inequality $({*}{*})$ holds for triangles with length-minimizing sides in the whole surface.
+The latter states that $({*}{*})$ holds for triangles with length-minimizing sides in the whole surface.
 The proof is left as an exercise to those who know Alexandrov--Toponogov theorem;
 the rest of the readers could simply believe that it is true.
 
-\begin{figure}[!ht]
-\begin{minipage}{.38\textwidth}
-\centering
-\includegraphics{mppics/pic-472}
-\end{minipage}\hfill
-\begin{minipage}{.58\textwidth}
-\centering
-\includegraphics{mppics/pic-473}
-\end{minipage}
-\end{figure}
-
-\parit{Configuration no 6 is forbidden.}
-Arguing by contradiction, suppose that the surface $\Sigma$ contains such a geodesic $\xi$;
+\parit{No 6 is forbidden.}
+Suppose that the surface $\Sigma$ contains such a geodesic $\xi$;
 assume that arcs and angles are labeled as on the left diagram.
 Applying the Gauss--Bonnet formula to the quadrangle and pentagon that the geodesic cuts from $\Sigma$, we get that
 \[2\cdot\alpha<\beta+\gamma
@@ -153,16 +149,27 @@ Applying the Gauss--Bonnet formula to the quadrangle and pentagon that the geode
 2\cdot\beta+2\cdot \gamma<\pi+\alpha.\leqno(\asterism)\]
 It follows that $\alpha <\tfrac \pi 3$.
 
-
-Consider the part of $\xi$ without the arc labeled by~$a$.
-It cuts from $\Sigma$ a pentagon $\Delta$ with sides and angles shown on the diagram.
-
-\begin{wrapfigure}{r}{50 mm}
-\vskip-5mm
+\begin{figure}[!ht]
+\vskip-1mm
+\begin{minipage}{.22\textwidth}
+\centering
+\includegraphics{mppics/pic-472}
+\end{minipage}
+\hfill
+\begin{minipage}{.35\textwidth}
+\centering
+\includegraphics{mppics/pic-473}
+\end{minipage}
+\hfill
+\begin{minipage}{.35\textwidth}
 \centering
 \includegraphics{mppics/pic-474}
-\vskip-3mm
-\end{wrapfigure}
+\end{minipage}
+\vskip-1mm
+\end{figure}
+
+Consider the part of $\xi$ without the arc labeled by~$a$.
+It cuts from $\Sigma$ a pentagon $\Delta$ with sides and angles shown on the middle diagram.
 
 Let us add additional vertices on the sides of $\Delta$ so that each side becomes length-minimizing.
 Choose a vertex $v$ and subdivide $\Delta$ into triangles with minimizing sides by joining $v$ to other vertices.
@@ -171,10 +178,10 @@ Consider a model triangle for each triangle in the subdivision;
 the model triangles lie in the plane and we suppose that they share sides as in $\Delta$.
 By the comparison inequality $({*}{*})$, the angles of the model triangles do not exceed the corresponding angles of the original triangle.
 Therefore the model triangles form a convex plane polygon, say $\tilde\Delta$.
-Moreover, the five angles of $\tilde\Delta$ that correspond to angles of $\Delta$ do not exceed those.
+Moreover, the five angles of $\tilde\Delta$ that correspond to the angles of $\Delta$ do not exceed those.
 
 \begin{wrapfigure}{r}{50 mm}
-\vskip-3mm
+\vskip-5mm
 \centering
 \includegraphics{mppics/pic-500}
 \vskip-1mm
@@ -196,7 +203,7 @@ On the other hand, the vectors $s_i$ circumambulate a polygon; therefore,
 --- a contradiction.
 
 {\small \parbf{Acknowledgments.}
-This work was supported by the National Science Foundation under grant DMS-2005279; Simons Foundation under grant \#584781.}
+This work was supported by the National Science Foundation under grant DMS-2005279 and Simons Foundation under grant \#584781.}
 
 
 

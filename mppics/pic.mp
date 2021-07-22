@@ -82,7 +82,7 @@ endfig;
 beginfig(50) 
 save u,p;
 path p[];
-u:=1cm;
+u:=.8cm;
 
 z0=(0,0)*u;
 z1=(1,0)*u;
@@ -136,14 +136,14 @@ z2{-1,2}..
 z1{-1,-2}..cycle;
 
 p3=
-z0{up}..
-z1{1,-2}..
-z4{-1,2}..
-z2{1,-2}..
+z1{up}..
+z0{-1,-2}..
+z2{1,2}..
+z4{-1,-2}..
 z3{up}..
-z2{-1,-2}..
-z4{1,2}..
-z1{-1,-2}..cycle;
+z4{1,-2}..
+z2{-1,2}..
+z0{1,-2}..cycle;
 
 p4=z.a..z.b..k*z.a..z.c..z.a..k*z.c..z.b..z.c..k*z.b..cycle;
 
@@ -162,7 +162,7 @@ draw p6 shifted (z.shifty+2*z.shift) pensemibold;
 
 label.bot(btex $1$ etex, z2+(0,20));
 label(btex $2$ etex, .6[z2,z3]+z.shift);
-label(btex $3$ etex, .6[z1,z2]+2*z.shift);
+label(btex $3$ etex, .6[z2,z3]+2*z.shift);
 label(btex $4$ etex, z.shifty+z2);
 label(btex $5$ etex, z.shifty+z2+z.shift);
 label(btex $6$ etex, .5[z2,z3]+z.shifty+2*z.shift);
@@ -172,7 +172,7 @@ endfig;
 beginfig(472) 
 save u,p;
 path p[];
-u:=1cm;
+u:=.9cm;
 
 z.a=(1,0)*u;
 z.b=z.a rotated 120;
@@ -219,7 +219,7 @@ endfig;
 beginfig(473) 
 save u,p;
 path p[];
-u:=1cm;
+u:=.9cm;
 
 z.a=origin;
 z.b=(-2,-1)*u;
@@ -262,7 +262,7 @@ endfig;
 beginfig(474) 
 save u,p,k;
 path p[];
-u:=1cm;
+u:=.9cm;
 k:=3;
 
 z.a=origin;
@@ -393,6 +393,114 @@ label (btex $c+y$ etex rotated (angle(z.ccc+z.ca)), .4*(z.ccc+z.ca));
 label (btex $z$ etex , .4*(z.baa+z.caa));
 endfig;
 
+beginfig(100) 
+save u,p,a;
+path p[];
+u:=1cm;
+a:=40;
+picture q[];
 
+z.c1=origin;
+z.d1=(2,0)*u rotated -a/2;
+z.e1=z.d1+(z.d1/2) rotated -a;
+z.b1=z.d1 xscaled -1;
+z.a1=z.e1 xscaled -1;
+
+p0=z.a1--z.b1--z.c1--z.d1--z.e1;
+p1=z.a1{(z.b1-z.a1) rotated 90}..tension .8 and .8 ..z.b1{(bisector(z.a1,z.b1,  z.c1)-z.b1)rotated 90}..tension .8 and .8 ..z.c1{(bisector(z.b1,z.c1,  z.d1)-z.c1)rotated 90}..tension .8 and .8 ..z.d1{(bisector(z.c1,z.d1,  z.e1)-z.d1)rotated 90}..tension .8 and .8 ..z.e1{(z.d1-z.e1) rotated 90}..tension .8 and .8 ..cycle;
+
+q1= image(
+draw p0 pensemibold;
+clip currentpicture to p1;
+draw p1;
+);
+
+z.a2=z.a1;
+z.b2=z.b1;
+z.c2=z.c1;
+z.d2=z.b2 xscaled -1 yscaled 1.8;
+z.e2=z.d2+(.6*z.d2) rotated 115;
+
+p2=z.a2--z.b2--z.c2--z.d2--z.e2;
+p3=
+z.a2{(z.b2-z.a2) rotated 90}
+..tension .8 and .8 ..
+z.b2{(bisector(z.a2,z.b2,  z.c2)-z.b2)rotated 90}
+..tension .8 and .8 ..
+z.c2{(bisector(z.b2,z.c2,  z.d2)-z.c2)rotated 90}
+..tension .9 and .9 ..
+z.e2{(z.d2-z.e2) rotated 90}
+..tension .8 and .8 ..
+z.d2{(bisector(z.c2,z.d2,  z.e2)-z.d2)rotated 90}
+..tension .8 and .8 ..
+cycle;
+
+
+q2= image(
+draw p2 pensemibold;
+clip currentpicture to p3;
+draw p3;
+);
+
+z.c3=z.c2;
+z.d3=z.d2;
+z.e3=z.e2;
+z.a3=z.e3 xscaled -1;
+z.b3=z.d3 xscaled -1;
+
+p4=z.a3--z.b3--z.c3--z.d3--z.e3;
+p5=
+z.b3{(bisector(z.a3,z.b3,  z.c3)-z.b3)rotated 90}
+..tension .8 and .8 ..
+z.a3{(z.b3-z.a3) rotated 90}
+..tension .9 and .9 ..
+z.c3{(bisector(z.b3,z.c3,  z.d3)-z.c3)rotated 90}
+..tension .9 and .9 ..
+z.e3{(z.d3-z.e3) rotated 90}
+..tension .8 and .8 ..
+z.d3{(bisector(z.c3,z.d3,  z.e3)-z.d3)rotated 90}
+..tension .8 and .8 ..
+cycle;
+
+q3= image(
+draw p4 pensemibold;
+clip currentpicture to p5;
+draw p5;
+);
+
+z.b4=origin;
+z.a4=(-.9,0)*u rotated 60;
+z.c4=z.a4 rotated 60;
+
+p6=z.a4--z.b4--z.c4--cycle;
+p7=
+z.a4{(bisector(z.c4,z.a4,  z.b4)-z.a4)rotated 90}
+..tension .8 and .8 ..
+z.b4{(bisector(z.a4,  z.b4,z.c4)-z.b4)rotated 90}
+..tension .8 and .8 ..
+z.c4{(bisector(z.b4,z.c4,z.a4)-z.c4)rotated 90}
+..tension .8 and .8 ..
+cycle;
+
+q4= image(
+draw p6 pensemibold;
+clip currentpicture to p7;
+draw p7;
+);
+
+z.shift1=(2.5,0)*u;
+z.shift2=(3.2,0)*u;
+z.shift3=(2.4,0)*u;
+
+draw q1;
+draw q2 shifted z.shift1;
+draw q3 shifted (z.shift1+z.shift2);
+draw q4 shifted (z.shift1+z.shift2+z.shift3);
+
+label.bot(btex $1$ etex, .5[z.b1,z.d1]);
+label(btex $2$ etex, .5[z.b2,z.d2] +z.shift1);
+label(btex $3$ etex, .333[.5[z.b3,z.d3],z.c3] +z.shift1+z.shift2);
+label(btex $4$ etex, .333[.5[z.a4,z.b4],z.c4] +z.shift1+z.shift2+z.shift3);
+endfig;
 
 end
