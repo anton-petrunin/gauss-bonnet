@@ -418,8 +418,8 @@ draw p1;
 z.a2=z.a1;
 z.b2=z.b1;
 z.c2=z.c1;
-z.d2=z.b2 xscaled -1 yscaled 1.8;
-z.e2=z.d2+(.6*z.d2) rotated 115;
+z.d2=z.b2 xscaled -1 yscaled 1.85;
+z.e2=z.d2+(.6*z.d2) rotated 117;
 
 p2=z.a2--z.b2--z.c2--z.d2--z.e2;
 p3=
