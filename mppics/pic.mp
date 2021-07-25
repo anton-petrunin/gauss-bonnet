@@ -412,7 +412,7 @@ p1=z.a1{(z.b1-z.a1) rotated 90}..tension .8 and .8 ..z.b1{(bisector(z.a1,z.b1,  
 q1= image(
 draw p0 pensemibold;
 clip currentpicture to p1;
-draw p1;
+draw p1 penhair;
 );
 
 z.a2=z.a1;
@@ -439,7 +439,7 @@ cycle;
 q2= image(
 draw p2 pensemibold;
 clip currentpicture to p3;
-draw p3;
+draw p3 penhair;
 );
 
 z.c3=z.c2;
@@ -465,7 +465,7 @@ cycle;
 q3= image(
 draw p4 pensemibold;
 clip currentpicture to p5;
-draw p5;
+draw p5 penhair;
 );
 
 z.b4=origin;
@@ -485,7 +485,7 @@ cycle;
 q4= image(
 draw p6 pensemibold;
 clip currentpicture to p7;
-draw p7;
+draw p7 penhair;
 );
 
 z.shift1=(2.5,0)*u;
