@@ -62,8 +62,8 @@ that is, configurations that cannot appear for closed geodesic.
 These are configurations 5 and 6.
 
 This question is a good exercise --- it could be explained to anyone, but an answer requires a considerable part of the theory.
-The reader is welcome to try the cases with more self-crossings, but the general question seems to be hard;
-I do not expect to see a complete classification in my lifetime.
+The reader is welcome to try the cases with more self-crossings (check \cite[Figures 15--17]{arnold}), but the general question seems to be hard.
+\emph{Is there is an algorithm for solving the general case?} 
 Our question is closely related to the so-called \emph{flat knot types} of geodesics;
 see \cite{angenent} and the references therein.
 
@@ -105,7 +105,7 @@ it divides the surface $\Sigma$ into one triangle, say $\Delta$, one hexagon, an
 Denote by $\alpha$, $\beta$, and $\gamma$ the internal angles of $\Delta$.
 
 Note that three monogons have internal angles $\alpha$, $\beta$, and~$\gamma$.
-By the Gauss--Bonnet formula, the integral of Gauss curvature along each monogon is 
+By Gauss--Bonnet, the integral of Gauss curvature along each monogon is 
 $\pi\z+\alpha$, $\pi\z+\beta$, and $\pi\z+\gamma$ 
 respectively.
 By $({*})$ the integral of Gauss curvature along the three monogons exceeds $4\cdot \pi$.
@@ -136,18 +136,19 @@ Then
 Since $\tilde\alpha+\tilde\beta+\tilde\gamma=\pi$, this inequality implies $({*})$.
 
 The inequality $({*}{*})$ easily follows from the proof of the \emph{Alexandrov--Toponogov theorem}.
-The latter states that $({*}{*})$ holds for triangles with length-minimizing sides in the whole surface.
+The latter implies that $({*}{*})$ holds for triangles with length-minimizing sides in the \emph{whole} surface.
 The proof is left as an 
-exercise for those familiar with the Alexandrov--Toponogov theorem; other readers may simply accept it as true.
+exercise for those familiar with the Alexandrov--Toponogov theorem; others may simply accept it as true.
 
 \parit{No 6 is forbidden.}
-Suppose that the surface $\Sigma$ contains such a geodesic $\xi$;
-assume that arcs and angles are labeled as in the leftmost part of the diagram below.
-Applying the Gauss--Bonnet formula to the quadrangle and pentagon that the geodesic cuts from $\Sigma$, we get that
-\[2\cdot\alpha<\beta+\gamma
-\qquad\text{and} \qquad
-2\cdot\beta+2\cdot \gamma<\pi+\alpha.\leqno(\asterism)\]
-It follows that $\alpha <\tfrac \pi 3$.
+Suppose that such a geodesic $\xi$ exists;
+assume that its arcs and angles are labeled as in the leftmost part of the diagram below.
+Applying the Gauss--Bonnet formula to the quadrangle and pentagon that $\xi$ cuts from the surface, we get that
+\[2\cdot\alpha<\beta+\gamma,
+ \quad
+2\cdot\beta+2\cdot \gamma<\pi+\alpha,
+\quad\text{and therefore} \quad \alpha <\tfrac \pi 3.\leqno(\asterism)\]
+
 
 \begin{figure}[!ht]
 \vskip-1mm
@@ -169,42 +170,44 @@ It follows that $\alpha <\tfrac \pi 3$.
 \end{figure}
 
 Consider the part of $\xi$ without the arc labeled by~$a$.
-It cuts from $\Sigma$ a pentagon $\Delta$ with sides and angles shown in the middle part of the diagram.
+It cuts from the surface a pentagon $\Delta$ with sides and angles shown in the middle part of the diagram.
 
 Let us add additional vertices on the sides of $\Delta$ so that each side becomes length-minimizing.
-Choose a vertex $v$ and subdivide $\Delta$ into triangles with minimizing sides by joining $v$ to other vertices.
-
-Consider a model triangle for each triangle in the subdivision;
+Choose a vertex $v$ and join it by shortest paths in $\Delta$ to every other vertex.
+Consider a model triangle for each triangle in the obtained subdivision of $\Delta$;
 the model triangles lie in the plane and we suppose that they share sides as in $\Delta$.
 By the comparison inequality $({*}{*})$, the angles of the model triangles do not exceed the corresponding angles of the original triangle.
 Therefore the model triangles form a convex plane polygon, say $\tilde\Delta$.
 Moreover, the five angles of $\tilde\Delta$ that correspond to the angles of $\Delta$ do not exceed those.
 
-\begin{wrapfigure}{r}{50 mm}
-\vskip-5mm
+It remains to show that $\tilde\Delta$ does not exist.
+Let us orient its sides counterclockwise;
+denote the obtained vectors by $s_1,\dots,s_k$.
+Note that the vectors $s_i$ point in the complement of white sectors shown below with angles marked.
+The sum of the magnitudes of the vectors in each black sector is also marked.
+
+\begin{wrapfigure}{r}{45 mm}
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-500}
-\vskip-1mm
+\vskip7mm
 \end{wrapfigure}
 
-It remains to show that the described plane polygon $\tilde\Delta$ does not exist.
-
-Let us orient the sides of $\tilde\Delta$ counterclockwise;
-denote the obtained vectors by $s_1,\dots,s_k$.
-On one hand, the conditions on the angles of the polygons imply that the vectors $s_i$ point in the complement of white sectors shown with angles marked on the diagram.
-The sum of the magnitudes of the vectors in each black sector is also marked.
-Let $v$, $v'$, $w$, $w'$ be the marked unit vectors;
-set $r=v+v'+w+w'$.
-Observe that $(\asterism)$ implies that $r\ne 0$,
-and, moreover, 
-\[\langle r,s_1\rangle+\dots+\langle r,s_k\rangle>0.\]
-On the other hand, the vectors $s_i$ circumambulate a polygon; therefore, 
-\[s_1+\dots+s_k=0\]
+By $(\asterism)$ we can choose a vector $r$ as on the diagram, so that $\phi\z>\tfrac{\pi-\beta}2$ and $\psi>\tfrac{\pi-\gamma}2$.
+Note that $(\asterism)$ implies that
+\[\langle r,v\rangle+\langle r,v'\rangle<0\quad\text{and}\quad \langle r,w\rangle+\langle r,w'\rangle<0\qquad\qquad\qquad\qquad\qquad\qquad\qquad\]
+for any unit vectors $v$, $v'$, $w$, and $w'$ in the marked black sectors.
+It follows that 
+\[
+\langle r,s_1\rangle+\dots+\langle r,s_k\rangle<0.\qquad\qquad\qquad\qquad\qquad\qquad
+\]
+On the other hand, the vectors $s_i$ circumambulate $\tilde\Delta$;
+so, the sum has to vanish
 --- a contradiction.
 
 {\small \parbf{Acknowledgments.}
-I want to thank Sergio Zamora Barrera for help.
-This work was supported by the NSF, grant DMS-2005279 and Simons Foundation, grant \#584781.}
+I want to thank Maxim Arnold, Serge Tabachnikov, and Sergio Zamora Barrera for their help.
+This work was partially supported by the NSF grant DMS-2005279, and Simons Foundation grant no 584781.}
 
 
 
