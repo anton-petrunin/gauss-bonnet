@@ -374,7 +374,7 @@ beginfig(474)
 save u,p,k;
 path p[];
 u:=.9cm;
-k:=3;
+k:=5;
 
 z.a=origin;
 z.b=(-2,-1)*u;
@@ -390,19 +390,21 @@ z1= point .5 of p0;
 z2= point 1 of p0;
 z3= point 2.5 of p0;
 z4= point 3 of p0;
-z5= point 5 of p0;
+z45=point 4.5 of p0;
+z5= point 6 of p0;
 z6= point 6.5 of p0;
 z7= point 7 of p0;
 z8= point 8.5 of p0;
 
-draw z0{dir (180+k*5)}..z2;
-draw z0{dir (180+k*3)}..z3;
+draw z0{dir (180+3*k)}..z2;
+draw z0{dir (180+2*k)}..z3;
 draw z0{dir (180+k)}..z4;
+draw z0{dir (180)}..z45;
 draw z0{dir (180-k)}..z5;
-draw z0{dir (180-k*3)}..z6;
-draw z0{dir (180-k*5)}..z7;
+draw z0{dir (180-2*k)}..z6;
+draw z0{dir (180-3*k)}..z7;
 
-dOt z0,z1,z2,z3,z4,z5,z6,z7,z8;
+dOt z0,z1,z2,z3,z4,z45,z5,z6,z7,z8;
 
 label.rt (btex $v$ etex, z.a);
 endfig;
@@ -519,7 +521,7 @@ whitelabel (btex $b$ etex rotated (-180+angle(z.b+z.bb)), .4*(z.b+z.bb));
 whitelabel (btex $b+z$ etex rotated (-180+angle(z.bbb+z.ba)), .4*(z.bbb+z.ba)+(1,-1));
 whitelabel (btex $c$ etex rotated (angle(z.c+z.cc)), .4*(z.c+z.cc));
 whitelabel (btex $c+y$ etex rotated (angle(z.ccc+z.ca)), .4*(z.ccc+z.ca)+(3,15));
-label (btex $z$ etex , .4*(z.baa+z.caa));
+label (btex $x$ etex , .4*(z.baa+z.caa));
 endfig;
 
 end
