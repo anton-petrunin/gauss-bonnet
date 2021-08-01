@@ -113,7 +113,7 @@ z.b=z.a rotated 120;
 z.c=z.a rotated -120;
 
 z.shift=(5,0)*u;
-z.shifty=(0,-3)*u;
+z.shifty=(-.8,-3)*u;
 
 p1=
 z0{up}..
