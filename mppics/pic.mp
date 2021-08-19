@@ -97,7 +97,7 @@ endfig;
 beginfig(55) 
 save u,p,k,l;
 path p[];
-u:=.7cm;
+u:=.5cm;
 k:=-1.8;
 l:=2.2;
 
@@ -171,7 +171,7 @@ endfig;
 beginfig(100) 
 save u,p,a;
 path p[];
-u:=1cm;
+u:=.8cm;
 a:=40;
 picture q[];
 
@@ -363,6 +363,9 @@ label.lft(btex $x$ etex, point 4.5 of p0);
 label.top(btex $b+z$ etex rotated 10, point 6.5 of p0);
 label.urt(btex $b$ etex, point 8.5 of p0);
 
+z45=point 4.5 of p0;
+
+whitelabel(btex $\Delta$ etex, .65[z.a,z45]);
 label.lft (btex $\alpha$ etex, (dir 180)*8+z.a);
 label.top (btex $\pi{-}\gamma$ etex, (dir 90)*8+z.b);
 label.bot (btex $\pi{-}\beta$ etex, (dir -90)*8+z.c);
@@ -382,7 +385,7 @@ z.c=(-1.9,1)*u;
 z.bb=(-4.1,-.6)*u;
 z.cc=(-4.05,.6)*u;
 
-p0=z.a{(z.b-z.a) rotated 5 }..z.b--z.b{(z.bb-z.b) rotated 5 }..z.bb--z.bb{(z.cc-z.bb) rotated 5 }..z.cc--z.cc{(z.c-z.cc) rotated 5}..z.c--z.c--cycle;
+p0=z.a{(z.b-z.a) rotated 5 }..z.b--z.b{(z.bb-z.b) rotated 5 }..z.bb--z.bb{(z.cc-z.bb) rotated 5 }..z.cc--z.cc{(z.c-z.cc) rotated 5}..z.c--z.c{(z.a-z.c) rotated 5}..z.a--cycle;
 draw p0 pensemibold;
 
 z0= point 0 of p0;
@@ -396,16 +399,17 @@ z6= point 6.5 of p0;
 z7= point 7 of p0;
 z8= point 8.5 of p0;
 
-draw z0{dir (180+3*k)}..z2;
-draw z0{dir (180+2*k)}..z3;
-draw z0{dir (180+k)}..z4;
-draw z0{dir (180)}..z45;
-draw z0{dir (180-k)}..z5;
-draw z0{dir (180-2*k)}..z6;
-draw z0{dir (180-3*k)}..z7;
+draw z0{dir (180+3*k)}..z2 penhair;
+draw z0{dir (180+2*k)}..z3 penhair;
+draw z0{dir (180+k)}..z4 penhair;
+draw z0{dir (180)}..z45 penhair;
+draw z0{dir (180-k)}..z5 penhair;
+draw z0{dir (180-2*k)}..z6 penhair;
+draw z0{dir (180-3*k)}..z7 penhair;
 
 dOt z0,z1,z2,z3,z4,z45,z5,z6,z7,z8;
 
+whitelabel(btex $\Delta$ etex, .6[z.a,z45]);
 label.rt (btex $v$ etex, z.a);
 endfig;
 
@@ -421,7 +425,7 @@ z.c=(-1.9,1)*u;
 z.bb=(-4.1,-.6)*u;
 z.cc=(-4.05,.6)*u;
 
-p0=z.a{(z.b-z.a) rotated 5 }..z.b--z.b{(z.bb-z.b) rotated 5 }..z.bb--z.bb{(z.cc-z.bb) rotated 5 }..z.cc--z.cc{(z.c-z.cc) rotated 5}..z.c--z.c--cycle;
+p0=z.a{(z.b-z.a) rotated 7 }..z.b--z.b{(z.bb-z.b) rotated 7 }..z.bb--z.bb{(z.cc-z.bb) rotated 7 }..z.cc--z.cc{(z.c-z.cc) rotated 7}..z.c--z.c{(z.a-z.c) rotated 7}..z.a--cycle;
 
 
 z0= point 0 of p0;
@@ -429,21 +433,36 @@ z1= point .5 of p0;
 z2= point 1 of p0;
 z3= point 2.5 of p0;
 z4= point 3 of p0;
+z45=point 4.5 of p0;
 z5= point 5 of p0;
 z6= point 6.5 of p0;
 z7= point 7 of p0;
 z8= point 8.5 of p0;
 
-drawarrow z1--z0 pensemibold;
-drawarrow z2--z1 pensemibold;
-drawarrow z3--z2 pensemibold;
-drawarrow z4--z3 pensemibold;
-drawarrow z5--z4 pensemibold;
-drawarrow z6--z5 pensemibold;
-drawarrow z7--z6 pensemibold;
-drawarrow z8--z7 pensemibold;
-drawarrow z0--z8 pensemibold;
+drawarrow z1--z0;
+drawarrow z2--z1;
+drawarrow z3--z2;
+drawarrow z4--z3;
+drawarrow z5--z45;
+drawarrow z45--z4;
+drawarrow z6--z5;
+drawarrow z7--z6;
+drawarrow z8--z7;
+drawarrow z0--z8;
 
+draw z0+4*unitvector(z2)--z2 penhair;
+draw z0+4*unitvector(z3)--z3 penhair;
+draw z0+5*unitvector(z4)--z4 penhair;
+draw z0+5*unitvector(z45)--z45 penhair;
+draw z0+0*unitvector(z5)--z5 penhair;
+draw z0+0*unitvector(z6)--z6 penhair;
+draw z0+0*unitvector(z7)--z7 penhair;
+
+whitelabel(btex $\tilde\Delta$ etex, .6[z.a,z45]);
+label.urt(btex $s_1$ etex, .5[z0,z8]);
+label.urt(btex $s_2$ etex, .5[z8,z7]);
+label(btex $\dots$ etex rotated 90,  z45+(-4,0));
+label.lrt(btex $s_k$ etex, .5[z1,z0]);
 endfig;
 
 beginfig(500) 
@@ -494,7 +513,7 @@ drawarrow z.o--z.v dashed evenly;
 drawarrow z.o--z.vv dashed evenly;
 drawarrow z.o--z.w dashed evenly;
 drawarrow z.o--z.ww dashed evenly;
-drawarrow z.o--z.q dashed evenly;
+drawarrow z.o--.8*z.q dashed evenly;
 
 whitelabelarcsprof(z.b, z.o, z.c, 21, 4, btex $\pi-\alpha$ etex);
 labelarcsprof(z.bb, z.o, z.bbb, 21, 21, btex $\beta$ etex);
@@ -511,7 +530,7 @@ labeldashedarcsprof(z.c, z.o, z.q, 23, 28, btex $\psi$ etex);
 
 dOt z.o;
 
-label.top (btex $r$ etex, z.q);
+label.top (btex $r$ etex, .8*z.q);
 label.lft (btex $v$ etex, z.v);
 label.lft (btex $v'$ etex, z.vv);
 label.rt (btex $w$ etex, z.w);
