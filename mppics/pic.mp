@@ -410,7 +410,6 @@ draw z0{dir (180-3*k)}..z7 penhair;
 dOt z0,z1,z2,z3,z4,z45,z5,z6,z7,z8;
 
 whitelabel(btex $\Delta$ etex, .6[z.a,z45]);
-label.rt (btex $v$ etex, z.a);
 endfig;
 
 beginfig(475) 
@@ -466,7 +465,7 @@ label.lrt(btex $s_k$ etex, .5[z1,z0]);
 endfig;
 
 beginfig(500) 
-save u,p,a,b,c,d,k,m;
+save u,p,a,b,c,d,k,m,ss;
 path p[];
 u:=1cm;
 a:=30;
@@ -475,6 +474,7 @@ c:=40;
 d:=18;
 k:=1.2;
 m:=.9;
+ss:=.8;
 
 z.o=origin;
 z.r=(0,1.7)*u;
@@ -513,7 +513,7 @@ drawarrow z.o--z.v dashed evenly;
 drawarrow z.o--z.vv dashed evenly;
 drawarrow z.o--z.w dashed evenly;
 drawarrow z.o--z.ww dashed evenly;
-drawarrow z.o--.8*z.q dashed evenly;
+drawarrow z.o--ss*z.q dashed evenly;
 
 whitelabelarcsprof(z.b, z.o, z.c, 21, 4, btex $\pi-\alpha$ etex);
 labelarcsprof(z.bb, z.o, z.bbb, 21, 21, btex $\beta$ etex);
@@ -530,7 +530,7 @@ labeldashedarcsprof(z.c, z.o, z.q, 23, 28, btex $\psi$ etex);
 
 dOt z.o;
 
-label.top (btex $r$ etex, .8*z.q);
+label.top (btex $r$ etex, ss*z.q);
 label.lft (btex $v$ etex, z.v);
 label.lft (btex $v'$ etex, z.vv);
 label.rt (btex $w$ etex, z.w);

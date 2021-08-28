@@ -173,15 +173,20 @@ Consider the part of $\xi$ without the arc labeled by~$a$.
 It cuts from the surface a pentagon $\Delta$ with sides and angles shown in the middle part of the diagram.
 
 Let us add additional vertices on the sides of $\Delta$ so that each side becomes length-minimizing in $\Delta$.
-Choose a vertex $v$ and join it by shortest paths in $\Delta$ to every other vertex.
+Choose a vertex of $\Delta$ and join it by shortest paths in $\Delta$ to every other vertex.
 Consider a model triangle for each triangle in the obtained subdivision of $\Delta$;
 the model triangles lie in the plane and we suppose that they share sides as in $\Delta$.
 By the comparison inequality $({*}{*})$, the angles of the model triangles do not exceed the corresponding angles of the original triangle.
-Therefore the model triangles form a convex plane polygon, say $\tilde\Delta$.
-Moreover, the five angles of $\tilde\Delta$ that correspond to the angles of $\Delta$ do not exceed those.
+Therefore the model triangles form a convex plane polygon, say $\tilde\Delta$,
+such that
+\begin{itemize}
+\item The five angles of $\tilde\Delta$ that correspond to the angles of $\Delta$ do not exceed those.
+\item Each side of $\tilde\Delta$ equals to the corresponding small side of $\Delta$.
+\end{itemize}
+It remains to show that no convex plane polygon meets these two conditions.
 
 \begin{wrapfigure}{r}{47 mm}
-\vskip-6mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-475}
 \bigskip
@@ -189,8 +194,7 @@ Moreover, the five angles of $\tilde\Delta$ that correspond to the angles of $\D
 \vskip7mm
 \end{wrapfigure}
 
-It remains to show that $\tilde\Delta$ does not exist.
-Let us orient its sides counterclockwise;
+Let us orient the sides $\tilde\Delta$ counterclockwise;
 denote the obtained vectors by $s_1,\dots,s_k$.
 Note that the vectors $s_i$ point in the complement of white sectors shown below with angles marked.
 The sum of the magnitudes of the vectors in each black sector is also marked.
@@ -208,7 +212,7 @@ so, the sum has to vanish
 --- a contradiction.
 
 {\small \parbf{Acknowledgments.}
-I want to thank Maxim Arnold, Serge Tabachnikov, David Kramer, and Sergio Zamora Barrera for their help.
+I want to thank Arseniy Akopyan, Maxim Arnold, Serge Tabachnikov, David Kramer, and Sergio Zamora Barrera for their help.
 This work was partially supported by the NSF grant DMS-2005279, and Simons Foundation grant no 584781.}
 
 
