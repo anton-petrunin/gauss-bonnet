@@ -191,23 +191,28 @@ It remains to show that no convex plane polygon meets these two conditions.
 \includegraphics{mppics/pic-475}
 \bigskip
 \includegraphics{mppics/pic-500}
-\vskip7mm
+\vskip1mm
 \end{wrapfigure}
 
 Let us orient the sides $\tilde\Delta$ counterclockwise;
 denote the obtained vectors by $s_1,\dots,s_k$.
 Note that the vectors $s_i$ point in the complement of white sectors shown below with angles marked.
-The sum of the magnitudes of the vectors in each black sector is also marked.
+The sum of the magnitudes of the vectors in each black sector is also marked (each back sector corresponds to a side of $\Delta$).
 
 By $(\asterism)$ we can choose a vector $r$ as on the diagram, so that $\phi\z>\tfrac{\pi-\beta}2$ and $\psi>\tfrac{\pi-\gamma}2$.
-Note that $(\asterism)$ implies inequalities on inner products
-\[\langle r,v\rangle+\langle r,v'\rangle<0\quad\text{and}\quad \langle r,w\rangle+\langle r,w'\rangle<0\qquad\qquad\qquad\qquad\qquad\qquad\qquad\]
-for any unit vectors $v$, $v'$, $w$, and $w'$ in the marked black sectors.
+Note that for any unit vectors $u$, $v$, $v'$, $w$, and $w'$ in the marked black sectors,
+we have
+\[\begin{aligned}
+\langle r,u\rangle<0,\quad \langle r,v\rangle<0,\quad \langle r,w\rangle&<0,
+\\
+\langle r,v\rangle+\langle r,v'\rangle<0,\quad \langle r,w\rangle+\langle r,w'\rangle&<0.
+ \end{aligned}
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\]
 It follows that 
 \[
 \langle r,s_1\rangle+\dots+\langle r,s_k\rangle<0.\qquad\qquad\qquad\qquad\qquad\qquad
 \]
-On the other hand, the vectors $s_i$ circumambulate $\tilde\Delta$;
+But the vectors $s_i$ circumambulate $\tilde\Delta$;
 so, the sum has to vanish
 --- a contradiction.
 

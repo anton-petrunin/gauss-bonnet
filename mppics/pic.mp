@@ -474,7 +474,7 @@ c:=40;
 d:=18;
 k:=1.2;
 m:=.9;
-ss:=.8;
+ss:=.6;
 
 z.o=origin;
 z.r=(0,1.7)*u;
@@ -507,6 +507,7 @@ z.v=k*z.b rotated 4;
 z.vv=k*z.bbb rotated 4;
 z.w=k*z.c rotated -4;
 z.ww=k*z.ccc rotated -3;
+z.u=k*z.caa rotated -3;
 
 
 drawarrow z.o--z.v dashed evenly;
@@ -514,6 +515,7 @@ drawarrow z.o--z.vv dashed evenly;
 drawarrow z.o--z.w dashed evenly;
 drawarrow z.o--z.ww dashed evenly;
 drawarrow z.o--ss*z.q dashed evenly;
+drawarrow z.o--z.u dashed evenly;
 
 whitelabelarcsprof(z.b, z.o, z.c, 21, 4, btex $\pi-\alpha$ etex);
 labelarcsprof(z.bb, z.o, z.bbb, 21, 21, btex $\beta$ etex);
@@ -531,16 +533,17 @@ labeldashedarcsprof(z.c, z.o, z.q, 23, 28, btex $\psi$ etex);
 dOt z.o;
 
 label.top (btex $r$ etex, ss*z.q);
-label.lft (btex $v$ etex, z.v);
-label.lft (btex $v'$ etex, z.vv);
-label.rt (btex $w$ etex, z.w);
-label.rt (btex $w'$ etex, z.ww);
+label.lft (btex $v'$ etex, z.v);
+label.lft (btex $v$ etex, z.vv);
+label.rt (btex $w'$ etex, z.w);
+label.rt (btex $w$ etex, z.ww);
+label.bot (btex $u$ etex, z.u);
 
 whitelabel (btex $b$ etex rotated (-180+angle(z.b+z.bb)), .4*(z.b+z.bb));
 whitelabel (btex $b+z$ etex rotated (-180+angle(z.bbb+z.ba)), .4*(z.bbb+z.ba)+(1,-1));
 whitelabel (btex $c$ etex rotated (angle(z.c+z.cc)), .4*(z.c+z.cc));
 whitelabel (btex $c+y$ etex rotated (angle(z.ccc+z.ca)), .4*(z.ccc+z.ca)+(3,15));
-label (btex $x$ etex , .4*(z.baa+z.caa));
+whitelabel (btex $x$ etex , .4*(z.baa+z.caa));
 endfig;
 
 end
